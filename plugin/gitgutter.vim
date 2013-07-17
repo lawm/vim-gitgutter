@@ -534,6 +534,7 @@ if !hasmapto('<Plug>GitGutterNextHunk') && maparg(']h', 'n') ==# ''
   nmap [h <Plug>GitGutterPrevHunk
 endif
 
+if g:gitgutter_eager
 augroup gitgutter
   autocmd!
   if g:gitgutter_eager
@@ -547,6 +548,7 @@ augroup gitgutter
   endif
   autocmd ColorScheme * call s:define_sign_column_highlight() | call s:define_highlights()
 augroup END
+endif
 
 " }}}
 
